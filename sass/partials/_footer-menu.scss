@@ -1,0 +1,111 @@
+.footer-menu__item {
+  list-style: none;
+  text-align: center;
+  margin: 18px 0px;
+}
+.footer-menu__link {
+  text-decoration: none;
+  color: $color-light-gray;
+  font-size: 12px;
+}
+
+.footer-social-media {
+  @include flexJustify(flex, center);
+}
+.footer__faceebok {
+  margin-right: 16px;
+}
+
+.footer__link:hover {
+  opacity: 0.7;
+}
+.footer-menu__link:hover {
+  color: $color-navy-blue;
+  font-weight: bold;
+}
+/* RWD */
+
+@media screen and (min-width: 830px) {
+  .footer-menu__item {
+    padding: 2px 0 2px 68px;
+  }
+  .footer-menu__item--padding-right {
+    padding-right: 68px;
+  }
+}
+
+@media screen and (max-width: 878px) and (min-width: 769px) {
+  .footer-menu__item {
+    padding: 2px 0 2px 48px;
+  }
+  .footer-menu__item--padding-right {
+    padding-right: 48px;
+  }
+}
+
+@media screen and (min-width: 361px) {
+  .footer__container {
+    @include flexJustify(flex, space-between);
+  }
+  .footer-menu__list {
+    @include flexJustify(flex, space-around);
+  }
+  .footer-social-media {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 361px) {
+  .footer__container {
+    padding: 0;
+  }
+  .footer {
+    margin: 98px 15px 0 15px;
+  }
+  .footer-menu__item {
+    padding: 2px 0 2px 32px;
+  }
+  .footer-menu__item--padding-right {
+    padding-right: 32px;
+  }
+  .footer-social-media {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .footer-menu__item {
+    padding-left: 14px;
+  }
+  .footer-menu__item--padding-right {
+    padding-right: 14px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .footer-menu__item {
+    padding-left: 6px;
+  }
+  .footer-menu__item--padding-right {
+    padding-right: 6px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .footer__img {
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 406px) and (min-width: 361px) {
+  .footer__img {
+    width: 100px;
+  }
+  .footer__faceebok {
+    margin-right: 4px;
+  }
+  .footer-menu__item {
+    padding-left: 3px;
+  }
+  .footer-menu__item--padding-right {
+    padding-right: 3px;
+  }
+}

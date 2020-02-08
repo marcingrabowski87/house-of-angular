@@ -1,0 +1,34 @@
+/* Varialble */
+$color-white: #ffffff;
+$color-light-red: #dc4a4a;
+$color-navy-blue: #152743;
+$color-light-navy-blue: #4870ac;
+$color-blue: #397fe8;
+$color-light-gray: #bbbec4;
+
+$width-desktop-container: 1200px;
+/* Mixins */
+@mixin flexJustifyAlign($flex, $justify, $align) {
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin flexJustify($flex, $justify) {
+  display: $flex;
+  justify-content: $justify;
+}
+%pseudo-class-settings {
+  content: " ";
+  position: absolute;
+  display: block;
+}
+
+%title-section-underline {
+  @extend %pseudo-class-settings;
+  bottom: -10px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 56px;
+  height: 3px;
+  background-color: $color-light-red;
+}

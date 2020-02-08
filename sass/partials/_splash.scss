@@ -1,0 +1,85 @@
+.splash {
+  background: url("../img/phone_banner_photo-min.png") no-repeat;
+  height: 300px;
+  top: 0;
+  left: 0;
+}
+
+.splash__container {
+  padding-top: 78px;
+}
+.splash__title {
+  color: $color-white;
+  letter-spacing: 1px;
+}
+.splash__text {
+  color: $color-white;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 15px;
+}
+.splash__button {
+  margin-top: 8px;
+}
+/* RWD */
+
+@media screen and (min-width: 769px) {
+  .splash {
+    background: url("../img/desktop_banner_photo-min.png") no-repeat;
+    height: 600px;
+  }
+  .splash__container {
+    padding-top: 400px;
+  }
+
+  .splash__inner {
+    width: 731px;
+  }
+  .splash__title {
+    font-size: 32px;
+  }
+  .splash__text {
+    line-height: 20px;
+  }
+  .splash__button {
+    margin-top: 26px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 361px) {
+  .splash {
+    background: url("../img/tablet_banner_photo-min.png") no-repeat;
+    height: 480px;
+  }
+  .splash__container {
+    padding-top: 280px;
+  }
+  .splash__button {
+    margin-top: 18px;
+  }
+  .splash__text {
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 726px) {
+  .splash__container {
+    padding-top: 210px;
+  }
+}
+
+@media screen and (min-width: 361px) and(max-width: 445px) {
+  .splash__container {
+    padding-top: 160px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .splash__container {
+    padding-top: 78px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .splash__container {
+    padding-top: 53px;
+  }
+}

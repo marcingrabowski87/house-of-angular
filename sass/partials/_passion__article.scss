@@ -1,0 +1,44 @@
+.passion__article {
+  padding-top: 90px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 38px;
+}
+
+.passion__pattern {
+  width: 50%;
+  overflow: hidden;
+  margin-left: 50%;
+  transform: translatex(-50%);
+  position: absolute;
+  top: 26px;
+  margin-bottom: 10px;
+}
+
+.passion__article__title {
+  margin-top: 22px;
+}
+.passion__article__text {
+  font-size: 12px;
+  margin-top: 12px;
+  padding: 0 56px;
+  line-height: 18px;
+}
+
+/* RWD */
+@media screen and (max-width: 768px) and (min-width: 361px) {
+  .passion__article {
+    padding-top: 119px;
+  }
+  .passion__article__title {
+    margin-top: 28px;
+  }
+  .passion__article__text {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+  .write__title::after {
+    bottom: -20px;
+  }
+}

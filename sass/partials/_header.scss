@@ -1,0 +1,149 @@
+.header__container {
+  height: 70px;
+  @include flexJustifyAlign(flex, space-between, center);
+}
+
+.header-menu {
+  display: none;
+}
+
+.header-menu.active {
+  display: block;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $color-blue;
+  z-index: 10;
+  & .header-menu__item {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px 0;
+    & .header-menu__link {
+      text-decoration: none;
+    }
+    .header-menu__link--active {
+      color: $color-white;
+    }
+  }
+}
+
+.header__container {
+  .header__button-width {
+    display: none;
+  }
+}
+.menu__link {
+  color: $color-navy-blue;
+  font-weight: bold;
+}
+.hamburger {
+  position: fixed;
+  right: 20px;
+}
+.hamburger.active {
+  z-index: 11;
+}
+/* RWD */
+
+@media screen and (min-width: 769px) {
+  .header-menu {
+    display: block;
+  }
+  .header-menu__list {
+    display: flex;
+    list-style-type: none;
+  }
+  .header-menu__link {
+    text-decoration: none;
+  }
+  .container {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  .header__container {
+    .header__button-width {
+      display: block;
+    }
+  }
+  .container {
+    max-width: $width-desktop-container;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .header-menu__link {
+    color: $color-navy-blue;
+    font-weight: 600;
+  }
+  .header__container {
+    height: 85px;
+  }
+  .logo__image {
+    width: 117px;
+  }
+
+  .header {
+    .header-menu__item {
+      padding: 12px 26px;
+    }
+    .header__button-width {
+      padding: 12px 40px;
+    }
+  }
+  .header-menu__link {
+    position: relative;
+  }
+  .header-menu__link--active::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $color-light-navy-blue;
+    left: 0;
+    top: 27px;
+  }
+  .header-menu__link:hover::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $color-light-navy-blue;
+    left: 0;
+    top: 27px;
+  }
+}
+
+@media screen and (max-width: 865px) and (min-width: 769px) {
+  .header {
+    .header-menu__item {
+      padding: 12px 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 361px) {
+  .container {
+    padding: 0 20px;
+    width: 768px;
+  }
+
+  .logo__image {
+    width: 108px;
+  }
+  .header__container {
+    height: 85px;
+  }
+  .splash__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}

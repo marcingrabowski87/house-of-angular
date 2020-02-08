@@ -1,0 +1,57 @@
+.passion__container {
+  text-align: center;
+  position: relative;
+  padding-bottom: 45px;
+}
+.passion__title {
+  position: relative;
+  text-align: center;
+  margin-top: 59px;
+}
+
+.passion__title::after {
+  @extend %title-section-underline;
+}
+
+/* RWD */
+
+@media screen and (min-width: 769px) {
+  .passion__title {
+    font-size: 32px;
+    margin-top: 98px;
+  }
+  .passion {
+    .passion__article {
+      padding-top: 150px;
+    }
+    .passion__article {
+      .passion__pattern {
+        top: 78px;
+      }
+    }
+    .passion__article__text {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    .passion__article__title {
+      margin-top: 27px;
+    }
+  }
+}
+@media screen and (min-width: 361px) {
+  .passion__container {
+    display: flex;
+    justify-content: center;
+  }
+  .passion__title::after {
+    bottom: -20px;
+  }
+  .passion__title {
+    font-size: 32px;
+  }
+  .passion {
+    .passion__pattern {
+      top: 43px;
+    }
+  }
+}
